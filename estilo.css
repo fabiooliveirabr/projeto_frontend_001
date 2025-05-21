@@ -6,14 +6,13 @@ body{
 }
 #banner{
     background-image: url(/imagens/header.png);
-    height: 80vh;
+    height: 45vw;
     display: flex;
     align-items: center;
     background-size: cover;
 }
 #formulario{
     width: 400px;
-    height: 500px;
     margin-left: 100px;
     color: white;
 }
@@ -45,6 +44,9 @@ body{
     justify-content: center;
     padding-top: 70px;
     padding-bottom: 70px;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .secao_clara{
     background-color: #202226;
@@ -85,4 +87,56 @@ body{
 #conheca h1{
     font-size: 45px;
     margin-bottom: 80px;
+}
+#formulario_tablet{
+    background-color: #202226;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
+#formulario_tablet input{
+    width: 83%;
+    padding: 20px;
+}
+#secao_final{
+    flex-wrap: wrap-reverse;
+}
+#secao_final button{
+    margin: auto;
+}
+
+
+/* Configuração para Tablet */
+@media screen and (min-width:768px) and (max-width:1024px){
+    #formulario_tablet{
+        display: block;
+    }
+    #formulario_desktop{
+        display: none;
+    }
+    #formulario h1{
+        font-size: 4vw;
+    }
+}
+
+/* Configuração para smartphones */
+@media screen and (max-width:767px){
+    #conheca{
+        width: 90vw;
+        margin: auto;
+        text-align: center;
+    }
+    #formulario_tablet{
+        display: block;
+    }
+    #formulario_desktop{
+        display: none;
+    }
+    #formulario{
+        margin-left: 25px;
+    }
+    #formulario h1{
+        font-size: 4.5vw;
+    }
 }
